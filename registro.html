@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Mi primera web" />
+    <title>Inicio Sesion</title>
+    <link rel="stylesheet" href="css/style1.css">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/logo2.png">
+    </header>
+    <nav>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="explora.html">Explora</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="videos.html">Ver</a></li>
+          <li><a href="grupo.html">Grupo</a></li>
+          <li><a class="active" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+<!--A partir de aca es codigo nuevo, lo anterior es lo que corresponde a la cabecilla de la pagina-->
+    <div class="contenedor">
+        <link rel="stylesheet" href="css/styleregis.css">
+            <script src="js/validreg.js"></script>
+        <div class="algo">                
+            <h2>Crear cuenta</h2>
+        </div>
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Usuario</label>
+                    <input type="text" placeholder="grovervas" id="username" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="grovervas@email.com" id="email" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Password" id="password"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label for="password2">Repetir contraseña</label>
+                    <input type="password" placeholder="Password" id="password2"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <br><br><br><br>
+      </div>
+      <div class="column side">
+          <h2></h2>
+      </div>
+    </div>
+  </body>
+  <footer>
+      Derechos Reservados 2023
+  </footer>
+</html>
