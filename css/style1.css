@@ -52,7 +52,7 @@ footer {
   }
 .form-login {
   width: 400px;
-  height: 340px;
+  height: 370px;
   background: #dd9b0edc;
   margin: auto;
   margin-top: 100px;
@@ -219,4 +219,12 @@ p.inicio {
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+}
+
+.warnings{
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #b06ab3;
+  padding-top: 20px;
 }
