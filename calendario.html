@@ -1,56 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="description" content="Mi primera web" />
-        <title>Calendario</title>
-        <!-- BOOTSTRAP 5.3.0 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    </head>
-    <header>
-        <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
-        <div class="p-3 text-bg-dark">
-            <div class="container">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="index.html" class="nav-link px-2 text-white">Inicio</a></li>
-                        <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
-                        <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
-                        <li><a href="calendario.html" class="nav-link px-2 text-secondary">Calendario</a></li>
-                        <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
-                        <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Mi primera web" />
+    <title>Calendario</title>
+    <!-- BOOTSTRAP 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</head>
+<header>
+    <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
+    <div class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Inicio</a></li>
+                    <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
+                    <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
+                    <li><a href="calendario.html" class="nav-link px-2 text-secondary">Calendario</a></li>
+                    <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
+                    <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+                <div class="text-end">
+                    <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                    <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="row">
+                <div class="col-1" style="background-color: rgb(43, 220, 226)">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut exercitationem sunt inventore saepe
+                        tenetur reiciendis voluptates commodi aperiam illo vel officia suscipit itaque ratione adipisci
+                        qui id amet, maiores excepturi.</p>
+                </div>
+                <!--  -->
+                <div class="col-10" style="background-color: blueviolet">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda ducimus ut
+                        numquam rem deserunt et earum sequi? Debitis, odio incidunt quo eos modi aut cumque magnam vero
+                        porro libero sunt quae maxime, voluptatibus sint pariatur, iure explicabo vitae suscipit. Labore
+                        consequatur fuga ad quidem. Expedita repellendus animi nam accusantium provident natus! Aliquid
+                        eaque impedit, consequuntur laborum recusandae omnis? Vero similique iusto quibusdam id animi
+                        quo omnis, recusandae quis obcaecati. Numquam magnam soluta dolor iusto, non nesciunt voluptatum
+                        nihil, obcaecati iste molestiae sunt quam dolores totam maxime harum dignissimos laborum nemo,
+                        quod sed. Labore accusantium consequatur perspiciatis, illo sapiente soluta impedit dicta
+                        quisquam quia officia eum aliquid reiciendis quibusdam modi quod quis sit consequuntur error
+                        praesentium quaerat debitis repudiandae eos in? Doloribus a voluptate eligendi itaque illum
+                        sequi corrupti soluta distinctio esse cumque, vero ut explicabo possimus, commodi tempore cum.
+                        Cumque veniam neque commodi. Aspernatur nisi incidunt dolore aliquam doloribus, reiciendis quia
+                        vitae recusandae a. Adipisci repudiandae enim nulla hic, aliquam ad optio repellat, vel alias
+                        nam perferendis nemo nobis provident qui minima sint maxime corporis minus distinctio quibusdam
+                        facere quam porro in aspernatur. Unde, culpa quaerat. At repudiandae quo doloribus hic cumque,
+                        sequi iure ratione dolore cum laudantium adipisci!</p>
+                </div>
+                <div class="col-1" style="background-color: rgb(226, 43, 43)">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, perspiciatis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="margin-top: 30px;" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Dejanos tu
+        comentario</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo mensaje</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Mensaje:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
                     </form>
-                    <div class="text-end">
-                        <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                        <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
                 </div>
             </div>
         </div>
-    </header>
-    <body>
-        <div class="container-fluid">
-            <div class="row align-items-end">
-                <div class="row">
-                    <div class="col-1" style="background-color: rgb(43, 220, 226)">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut exercitationem sunt inventore saepe tenetur reiciendis voluptates commodi aperiam illo vel officia suscipit itaque ratione adipisci qui id amet, maiores excepturi.</p>
-                    </div>
-                    <!--  -->
-                    <div class="col-10" style="background-color: blueviolet">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda ducimus ut numquam rem deserunt et earum sequi? Debitis, odio incidunt quo eos modi aut cumque magnam vero porro libero sunt quae maxime, voluptatibus sint pariatur, iure explicabo vitae suscipit. Labore consequatur fuga ad quidem. Expedita repellendus animi nam accusantium provident natus! Aliquid eaque impedit, consequuntur laborum recusandae omnis? Vero similique iusto quibusdam id animi quo omnis, recusandae quis obcaecati. Numquam magnam soluta dolor iusto, non nesciunt voluptatum nihil, obcaecati iste molestiae sunt quam dolores totam maxime harum dignissimos laborum nemo, quod sed. Labore accusantium consequatur perspiciatis, illo sapiente soluta impedit dicta quisquam quia officia eum aliquid reiciendis quibusdam modi quod quis sit consequuntur error praesentium quaerat debitis repudiandae eos in? Doloribus a voluptate eligendi itaque illum sequi corrupti soluta distinctio esse cumque, vero ut explicabo possimus, commodi tempore cum. Cumque veniam neque commodi. Aspernatur nisi incidunt dolore aliquam doloribus, reiciendis quia vitae recusandae a. Adipisci repudiandae enim nulla hic, aliquam ad optio repellat, vel alias nam perferendis nemo nobis provident qui minima sint maxime corporis minus distinctio quibusdam facere quam porro in aspernatur. Unde, culpa quaerat. At repudiandae quo doloribus hic cumque, sequi iure ratione dolore cum laudantium adipisci!</p>
-                    </div>
-                    <div class="col-1" style="background-color: rgb(226, 43, 43)">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, perspiciatis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!---
+    </div>
+    <!---
         <div class="row">
             <div class="column side">
                 <img style="width: 340px; height: auto;" src="img/generico6.png">
@@ -228,7 +282,7 @@
                     <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
                     <hr class="mb-4">
                     <p>
-                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
+                        <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
                     </p>
                     <p>
                         <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
@@ -247,7 +301,7 @@
                         <strong class="text-primary">Test</strong>
                     </p>
                 </div>
-            <!--2da Fila-->
+                <!--2da Fila-->
                 <div class="text-center">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
@@ -269,8 +323,9 @@
                             <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
                         </li>
                     </ul>
-                </div>    
-            </div> 
+                </div>
+            </div>
         </div>
     </footer>
-</html> 
+
+</html>

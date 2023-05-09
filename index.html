@@ -1,133 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--  -->
-        <meta charset="utf-8" />
-        <meta name="description" content="Mi primera web" />
-        <title>Principal</title>
-        <!-- BOOTSTRAP 5.3.0 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-        <!---<link rel="stylesheet" href="css/style1.css"> -->
-    </head>
-    <header>
-        <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
-        <div class="p-3 text-bg-dark">
-            <div class="container">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="index.html" class="nav-link px-2 text-secondary">Inicio</a></li>
-                        <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
-                        <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
-                        <li><a href="calendario.html" class="nav-link px-2 text-white">Calendario</a></li>
-                        <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
-                        <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                    </form>
-                    <div class="text-end">
-                        <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                        <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
-                    </div>
+
+<head>
+    <!--  -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Mi primera web" />
+    <title>Principal</title>
+    <!-- BOOTSTRAP 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!---<link rel="stylesheet" href="css/style1.css"> -->
+</head>
+<header>
+    <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
+    <div class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-secondary">Inicio</a></li>
+                    <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
+                    <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
+                    <li><a href="calendario.html" class="nav-link px-2 text-white">Calendario</a></li>
+                    <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
+                    <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+                <div class="text-end">
+                    <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                    <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
                 </div>
             </div>
         </div>
-    </header>
-    <body>
-        <div class="container-fluid">
-            <div class="row align-items-end">
-                <div class="row">
-                    <!-- Column left -->
-                    <div class="col-1">
-                        <h2>¿Sabias que...?</h2>
-                        <p class="inicio"><br><br><br><br>Esta pagina fue creada en menos de 24 horas.<br><br><br><br>
-                        Aunque el 'Goku Day' se festeja en mayo, el onomástico del protagonista se festeja antes, el 16 de abril, aunque seguramente 
+    </div>
+</header>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="row">
+                <!-- Column left -->
+                <div class="col-1">
+                    <h2>¿Sabias que...?</h2>
+                    <p class="inicio"><br><br><br><br>Esta pagina fue creada en menos de 24 horas.<br><br><br><br>
+                        Aunque el 'Goku Day' se festeja en mayo, el onomástico del protagonista se festeja antes, el 16
+                        de abril, aunque seguramente
                         prefiera pasar el día entrenando para ser cada vez más fuerte.
-                        <br><br><br><br>El 9 de abril se emite kimetsu no yaiba  tercera temporada
-                        <br><br><br><br>Laura esta a 2 KM de tu casa, no la pases solo esta noche.</p>
-                    </div>
-                    <!-- Column center -->
-                    <div class="col-10" style="background-color: blueviolet">
-                        <div class="album py-5 bg-body-tertiary">
-                            <div class="container">
-                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/dragon-ball-super.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">Dragon Ball regresa con nueva serie tras años. Nuevos enemigos, formas y personajes darán forma al futuro de los protagonistas. Disfruta y emocionate con Goku, Vegeta, Gohan y compañía.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Dragon Ball Super</button>
-                                                    </div>
+                        <br><br><br><br>El 9 de abril se emite kimetsu no yaiba tercera temporada
+                        <br><br><br><br>Laura esta a 2 KM de tu casa, no la pases solo esta noche.
+                    </p>
+                </div>
+                <!-- Column center -->
+                <div class="col-10" style="background-color: blueviolet">
+                    <div class="album py-5 bg-body-tertiary">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/dragon-ball-super.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">Dragon Ball regresa con nueva serie tras años. Nuevos
+                                                enemigos, formas y personajes darán forma al futuro de los
+                                                protagonistas. Disfruta y emocionate con Goku, Vegeta, Gohan y compañía.
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-secondary">Dragon Ball
+                                                        Super</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/shingeki-no-kyojin.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">Humanidad al borde de la extinción por criaturas gigantes devoradoras. Supervivientes residen en ciudad fortificada. Titanes amenazan la paz y su origen se desvelará.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Shingeki No Kyojin</button>
-                                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/shingeki-no-kyojin.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">Humanidad al borde de la extinción por criaturas
+                                                gigantes devoradoras. Supervivientes residen en ciudad fortificada.
+                                                Titanes amenazan la paz y su origen se desvelará.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-secondary">Shingeki No
+                                                        Kyojin</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/kimetsu-no-yaiba.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">En la era Taisho de Japón, Tanjiro busca venganza y cura para su hermana, convertida en demonio tras masacre familiar. Se convierte en cazador de demonios.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Kimetsu No Yaiba</button>
-                                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/kimetsu-no-yaiba.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">En la era Taisho de Japón, Tanjiro busca venganza y
+                                                cura para su hermana, convertida en demonio tras masacre familiar. Se
+                                                convierte en cazador de demonios.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-secondary">Kimetsu No
+                                                        Yaiba</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/one-piece.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">Luffy se propone ser el Rey de los Piratas y encontrar el mayor tesoro de la historia, One Piece.<br>Como capitán, no se detendrá ante nada para lograr su objetivo.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">One Piece</button>
-                                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/one-piece.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">Luffy se propone ser el Rey de los Piratas y encontrar
+                                                el mayor tesoro de la historia, One Piece.<br>Como capitán, no se
+                                                detendrá ante nada para lograr su objetivo.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">One
+                                                        Piece</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/my-hero-academia.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">En un mundo donde la mayoría nace con un Don, aparecen héroes y villanos. Los héroes trabajan para el gobierno y son admirados. Los niños anhelan ser héroes número uno.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">My Hero Academia</button>
-                                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/my-hero-academia.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">En un mundo donde la mayoría nace con un Don, aparecen
+                                                héroes y villanos. Los héroes trabajan para el gobierno y son admirados.
+                                                Los niños anhelan ser héroes número uno.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">My
+                                                        Hero Academia</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card shadow-sm">
-                                            <img src="img/chainsaw-man.jpg">
-                                            <div class="card-body">
-                                                <p class="card-text">Denji vive con un demonio motosierra y trabaja matando demonios para pagar deudas. Una traición lo mata, pero revive como Chainsaw Man, un ser con corazón demoniaco.</p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Chainsaw Man</button>
-                                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card shadow-sm">
+                                        <img src="img/chainsaw-man.jpg">
+                                        <div class="card-body">
+                                            <p class="card-text">Denji vive con un demonio motosierra y trabaja matando
+                                                demonios para pagar deudas. Una traición lo mata, pero revive como
+                                                Chainsaw Man, un ser con corazón demoniaco.</p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-secondary">Chainsaw Man</button>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 30px;" type="button" class="btn btn-primary"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    data-bs-whatever="@mdo">Dejanos tu
+                                    comentario</button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Nuevo mensaje</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="recipient-name"
+                                                            class="col-form-label">Nombre:</label>
+                                                        <input type="text" class="form-control" id="recipient-name">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="message-text"
+                                                            class="col-form-label">Mensaje:</label>
+                                                        <textarea class="form-control" id="message-text"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn btn-primary">Enviar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -135,106 +201,108 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Column right -->
-                    <div class="col-1"></div>
                 </div>
+                <!-- Column right -->
+                <div class="col-1"></div>
             </div>
         </div>
-    </body>
-    <footer class="bg-dark-subtle text-dark pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <!--Primera Columna-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
-                    <hr class="mb-4">
-                    <p>
-                        dssdasdsadasdsadsduisdsadbasds
-                        dasdsdasdsadasdsadsadsadasdsad
-                        sadasdsadsadsadsadsaddsas
-                        dasdsdsadasdadsadasdsadasdas
-                        dasdsadsdasadadsadasdwdadswawdaw
-                    </p>
-                </div>
-                <!--Segunda colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Formulario</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Ayuda</a>
-                    </p>
-                </div>
-                <!--Tercera colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
-                    </p>
-                </div>
-                <!--Cuarta Columna colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
-                    <hr class="mb-4">
-                    <p>
-                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
-                    </p>
-                    <p>
-                        <li class="fas fa-envelope me-3"></li> anime@gmail.com
-                    </p>
-                    <p>
-                        <li class="fas fa-phone me-3"></li>55226422
-                    </p>
-                    <p>
-                        <li class="fas fa-print me-3"></li> 22535561
-                    </p>
-                </div>
+    </div>
+</body>
+<footer class="bg-dark-subtle text-dark pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!--Primera Columna-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
                 <hr class="mb-4">
-                <div class="text-center mb-2">
-                    <p>Copyright Todos los Derechos reservados
-                        <a href="#"></a>
-                        <strong class="text-primary">Test</strong>
-                    </p>
-                </div>
+                <p>
+                    dssdasdsadasdsadsduisdsadbasds
+                    dasdsdasdsadasdsadsadsadasdsad
+                    sadasdsadsadsadsadsaddsas
+                    dasdsdsadasdadsadasdsadasdas
+                    dasdsadsdasadadsadasdwdadswawdaw
+                </p>
+            </div>
+            <!--Segunda colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Formulario</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Ayuda</a>
+                </p>
+            </div>
+            <!--Tercera colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
+                </p>
+            </div>
+            <!--Cuarta Columna colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
+                </p>
+                <p>
+                    <li class="fas fa-envelope me-3"></li> anime@gmail.com
+                </p>
+                <p>
+                    <li class="fas fa-phone me-3"></li>55226422
+                </p>
+                <p>
+                    <li class="fas fa-print me-3"></li> 22535561
+                </p>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+                <p>Copyright Todos los Derechos reservados
+                    <a href="#"></a>
+                    <strong class="text-primary">Test</strong>
+                </p>
+            </div>
             <!--2da Fila-->
-                <div class="text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
-                        </li>
-                    </ul>
-                </div>    
-            </div> 
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer>
-</html> 
+    </div>
+</footer>
+
+</html>

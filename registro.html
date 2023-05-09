@@ -1,179 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="description" content="Mi primera web" />
-        <title>Inicio Sesion</title>
-        <!-- BOOTSTRAP 5.3.0 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>>
-    </head>
-    <header>
-        <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
-        <div class="p-3 text-bg-dark">
-            <div class="container">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="index.html" class="nav-link px-2 text-white">Inicio</a></li>
-                        <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
-                        <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
-                        <li><a href="calendario.html" class="nav-link px-2 text-white">Calendario</a></li>
-                        <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
-                        <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                    </form>
-                    <div class="text-end">
-                        <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-                        <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
-                    </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Mi primera web" />
+    <title>Inicio Sesion</title>
+    <!-- BOOTSTRAP 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>>
+</head>
+<header>
+    <img style="display: block;margin: auto;width: 100%;;height: 180px;" src="img/logo2.png">
+    <div class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Inicio</a></li>
+                    <li><a href="explora.html" class="nav-link px-2 text-white">Explora</a></li>
+                    <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
+                    <li><a href="calendario.html" class="nav-link px-2 text-white">Calendario</a></li>
+                    <li><a href="videos.html" class="nav-link px-2 text-white">Ver</a></li>
+                    <li><a href="grupo.html" class="nav-link px-2 text-white">Grupo</a></li>
+                </ul>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+                <div class="text-end">
+                    <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+                    <a href="registro.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
                 </div>
             </div>
         </div>
-    </header>
-    <body>
-<!--A partir de aca es codigo nuevo, lo anterior es lo que corresponde a la cabecilla de la pagina-->
+    </div>
+</header>
+
+<body>
+    <!--A partir de aca es codigo nuevo, lo anterior es lo que corresponde a la cabecilla de la pagina-->
     <div class="contenedor">
         <link rel="stylesheet" href="css/styleregis.css">
-            <script src="js/validreg.js"></script>
-        <div class="algo">                
+        <script src="js/validreg.js"></script>
+        <div class="algo">
             <h2>Crear cuenta</h2>
         </div>
-            <form id="form" class="form">
-                <div class="form-control">
-                    <label for="username">Usuario</label>
-                    <input type="text" placeholder="grovervas" id="username" />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
-                </div>
-                <div class="form-control">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="grovervas@email.com" id="email" />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
-                </div>
-                <div class="form-control">
-                    <label for="password">Contraseña</label>
-                    <input type="password" placeholder="Password" id="password"/>
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
-                </div>
-                <div class="form-control">
-                    <label for="password2">Repetir contraseña</label>
-                    <input type="password" placeholder="Password" id="password2"/>
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
-                </div>
-                <button>Enviar</button>
-            </form>
-        </div>
-        <br><br><br><br>
-      </div>
-      <div class="column side">
-          <h2></h2>
-      </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Usuario</label>
+                <input type="text" placeholder="grovervas" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="grovervas@email.com" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="Password" id="password" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Repetir contraseña</label>
+                <input type="password" placeholder="Password" id="password2" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button>Enviar</button>
+        </form>
     </div>
-    </body>
-    <footer class="bg-dark-subtle text-dark pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <!--Primera Columna-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
-                    <hr class="mb-4">
-                    <p>
-                        dssdasdsadasdsadsduisdsadbasds
-                        dasdsdasdsadasdsadsadsadasdsad
-                        sadasdsadsadsadsadsaddsas
-                        dasdsdsadasdadsadasdsadasdas
-                        dasdsadsdasadadsadasdwdadswawdaw
-                    </p>
+    <br><br><br><br>
+    </div>
+    <div class="column side">
+        <h2></h2>
+    </div>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Dejanos tu comentario</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo mensaje</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!--Segunda colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Formulario</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Ayuda</a>
-                    </p>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Mensaje:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
                 </div>
-                <!--Tercera colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
-                    </p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button>
                 </div>
-                <!--Cuarta Columna colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
-                    <hr class="mb-4">
-                    <p>
-                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
-                    </p>
-                    <p>
-                        <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
-                    </p>
-                    <p>
-                        <li class="fas fa-phone me-3"></li>55226422
-                    </p>
-                    <p>
-                        <li class="fas fa-print me-3"></li> 22535561
-                    </p>
-                </div>
-                <hr class="mb-4">
-                <div class="text-center mb-2">
-                    <p>Copyright Todos los Derechos reservados
-                        <a href="#"></a>
-                        <strong class="text-primary">Test</strong>
-                    </p>
-                </div>
-            <!--2da Fila-->
-                <div class="text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
-                        </li>
-                    </ul>
-                </div>    
-            </div> 
+            </div>
         </div>
-    </footer>
+    </div>
+</body>
+<footer class="bg-dark-subtle text-dark pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!--Primera Columna-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+                <hr class="mb-4">
+                <p>
+                    dssdasdsadasdsadsduisdsadbasds
+                    dasdsdasdsadasdsadsadsadasdsad
+                    sadasdsadsadsadsadsaddsas
+                    dasdsdsadasdadsadasdsadasdas
+                    dasdsadsdasadadsadasdwdadswawdaw
+                </p>
+            </div>
+            <!--Segunda colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Formulario</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Ayuda</a>
+                </p>
+            </div>
+            <!--Tercera colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
+                </p>
+            </div>
+            <!--Cuarta Columna colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
+                </p>
+                <p>
+                    <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
+                </p>
+                <p>
+                    <li class="fas fa-phone me-3"></li>55226422
+                </p>
+                <p>
+                    <li class="fas fa-print me-3"></li> 22535561
+                </p>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+                <p>Copyright Todos los Derechos reservados
+                    <a href="#"></a>
+                    <strong class="text-primary">Test</strong>
+                </p>
+            </div>
+            <!--2da Fila-->
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
 </html>
