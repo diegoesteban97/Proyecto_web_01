@@ -43,6 +43,7 @@
 
 <body>
     <div class="container-fluid">
+
         <div class="row align-items-end">
             <div class="row">
                 <div class="col-1" style="background-color: rgb(43, 220, 226)">
@@ -50,24 +51,160 @@
                         tenetur reiciendis voluptates commodi aperiam illo vel officia suscipit itaque ratione adipisci
                         qui id amet, maiores excepturi.</p>
                 </div>
-                <!--  -->
+                
+
                 <div class="col-10" style="background-color: blueviolet">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem assumenda ducimus ut
-                        numquam rem deserunt et earum sequi? Debitis, odio incidunt quo eos modi aut cumque magnam vero
-                        porro libero sunt quae maxime, voluptatibus sint pariatur, iure explicabo vitae suscipit. Labore
-                        consequatur fuga ad quidem. Expedita repellendus animi nam accusantium provident natus! Aliquid
-                        eaque impedit, consequuntur laborum recusandae omnis? Vero similique iusto quibusdam id animi
-                        quo omnis, recusandae quis obcaecati. Numquam magnam soluta dolor iusto, non nesciunt voluptatum
-                        nihil, obcaecati iste molestiae sunt quam dolores totam maxime harum dignissimos laborum nemo,
-                        quod sed. Labore accusantium consequatur perspiciatis, illo sapiente soluta impedit dicta
-                        quisquam quia officia eum aliquid reiciendis quibusdam modi quod quis sit consequuntur error
-                        praesentium quaerat debitis repudiandae eos in? Doloribus a voluptate eligendi itaque illum
-                        sequi corrupti soluta distinctio esse cumque, vero ut explicabo possimus, commodi tempore cum.
-                        Cumque veniam neque commodi. Aspernatur nisi incidunt dolore aliquam doloribus, reiciendis quia
-                        vitae recusandae a. Adipisci repudiandae enim nulla hic, aliquam ad optio repellat, vel alias
-                        nam perferendis nemo nobis provident qui minima sint maxime corporis minus distinctio quibusdam
-                        facere quam porro in aspernatur. Unde, culpa quaerat. At repudiandae quo doloribus hic cumque,
-                        sequi iure ratione dolore cum laudantium adipisci!</p>
+                    <div class="container-fluid py-3">
+                        <h1 class="font-weight-light">Calendar</h1>
+                        <div class="row">
+                            <div id="holder" class="col-12"></div>
+                        </div>
+                    </div>
+                    <script type="text/tmpl" id="tmpl">
+                        {{ var date = date || new Date(),
+                          month = date.getMonth(), 
+                          year = date.getFullYear(), 
+                          first = new Date(year, month, 1), 
+                          last = new Date(year, month + 1, 0),
+                          startingDay = first.getDay(), 
+                          thedate = new Date(year, month, 1 - startingDay),
+                          dayclass = lastmonthcss,
+                          today = new Date(),
+                          i, j; 
+                      if (mode === 'week') {
+                        thedate = new Date(date);
+                        thedate.setDate(date.getDate() - date.getDay());
+                        first = new Date(thedate);
+                        last = new Date(thedate);
+                        last.setDate(last.getDate()+6);
+                      } else if (mode === 'day') {
+                        thedate = new Date(date);
+                        first = new Date(thedate);
+                        last = new Date(thedate);
+                        last.setDate(thedate.getDate() + 1);
+                      }
+                      
+                      }}
+                        <table class="calendar-table table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="row py-2">
+                                            <div class="col">
+                                                <span class="btn-group">
+                                                    <button class="js-cal-prev btn btn-primary">
+                                                        <</button> <button class="js-cal-next btn btn-primary">>
+                                                    </button>
+                                                </span>
+                                                <button class="js-cal-option btn btn-primary {{: first.toDateInt() <= today.toDateInt() && today.toDateInt() <= last.toDateInt() ? 'active':'' }}" data-date="{{: today.toISOString()}}" data-mode="month">{{: todayname }}</button>
+                                            </div>
+                                            <div class="col text-center">
+                                                <span class="btn-group btn-group-lg">
+                                                        {{ if (mode !== 'day') { }}
+                                                        {{ if (mode === 'month') { }}<button class="js-cal-option btn btn-link" data-mode="year">{{: months[month] }}</button>{{ } }}
+                                                        {{ if (mode ==='week') { }}
+                                                        <button class="btn btn-link disabled">{{: shortMonths[first.getMonth()] }} {{: first.getDate() }} - {{: shortMonths[last.getMonth()] }} {{: last.getDate() }}</button>
+                                                        {{ } }}
+                                                        <button class="js-cal-years btn btn-link">{{: year}}</button>
+                                                        {{ } else { }}
+                                                        <button class="btn btn-link disabled">{{: date.toDateString() }}</button>
+                                                        {{ } }}
+                                                </span>
+                                            </div>
+                                            <div class="col text-right">
+                                                <span class="btn-group">
+                                                    <button class="js-cal-option btn btn-primary {{: mode==='year'? 'active':'' }}" data-mode="year">Año</button>
+                                                    <button class="js-cal-option btn btn-primary {{: mode==='month'? 'active':'' }}" data-mode="month">Mes</button>
+                                                    <button class="js-cal-option btn btn-primary {{: mode==='week'? 'active':'' }}" data-mode="week">Semana</button>
+                                                    <button class="js-cal-option btn btn-primary {{: mode==='day'? 'active':'' }}" data-mode="day">Dia</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </thead>
+                            {{ if (mode ==='year') {
+                          month = 0;
+                        }}
+                            <tbody>
+                                {{ for (j = 0; j < 3; j++) { }}
+                                <tr>
+                                    {{ for (i = 0; i < 4; i++) { }}
+                                    <td class="calendar-month month-{{:month}} js-cal-option" data-date="{{: new Date(year, month, 1).toISOString() }}" data-mode="month">
+                                        {{: months[month] }}
+                                        {{ month++;}}
+                                    </td>
+                                    {{ } }}
+                                </tr>
+                                {{ } }}
+                            </tbody>
+                            {{ } }}
+                            {{ if (mode ==='month' || mode ==='week') { }}
+                            <thead>
+                                <tr class="c-weeks">
+                                    {{ for (i = 0; i < 7; i++) { }}
+                                    <th class="c-name">
+                                        {{: days[i] }}
+                                    </th>
+                                    {{ } }}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{ for (j = 0; j < 6 && (j < 1 || mode === 'month'); j++) { }}
+                                <tr>
+                                    {{ for (i = 0; i < 7; i++) { }}
+                                    {{ if (thedate > last) { dayclass = nextmonthcss; } else if (thedate >= first) { dayclass = thismonthcss; } }}
+                                    <td class="calendar-day {{: dayclass }} {{: thedate.toDateCssClass() }} {{: date.toDateCssClass() === thedate.toDateCssClass() ? 'selected':'' }} {{: daycss[i] }} js-cal-option" data-date="{{: thedate.toISOString() }}">
+                                        <div class="date">{{: thedate.getDate() }}</div>
+                                        {{ thedate.setDate(thedate.getDate() + 1);}}
+                                    </td>
+                                    {{ } }}
+                                </tr>
+                                {{ } }}
+                            </tbody>
+                            {{ } }}
+                            {{ if (mode ==='day') { }}
+                            <tbody>
+                                <tr>
+                                    <td colspan="7">
+                                        <table class="table table-striped table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th> </th>
+                                                    <th style="text-align: center; width: 100%">{{: days[date.getDay()] }}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="timetitle">All Day</th>
+                                                    <td class="{{: date.toDateCssClass() }}"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="timetitle">Before 6 AM</th>
+                                                    <td class="time-0-0"> </td>
+                                                </tr>
+                                                {{for (i = 6; i < 22; i++) { }}
+                                                <tr>
+                                                    <th class="timetitle">{{: i <= 12 ? i : i - 12 }} {{: i < 12 ? "AM" : "PM"}}</th>
+                                                    <td class="time-{{: i}}-0"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="timetitle">{{: i <= 12 ? i : i - 12 }}:30 {{: i < 12 ? "AM" : "PM"}}</th>
+                                                    <td class="time-{{: i}}-30"> </td>
+                                                </tr>
+                                                {{ } }}
+                                                <tr>
+                                                    <th class="timetitle">After 10 PM</th>
+                                                    <td class="time-22-0"> </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            {{ } }}
+                        </table>
+                    </script>
                 </div>
                 <div class="col-1" style="background-color: rgb(226, 43, 43)">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, perspiciatis.</p>
@@ -104,228 +241,102 @@
             </div>
         </div>
     </div>
-    <!---
-        <div class="row">
-            <div class="column side">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-            </div>
-            <div class="column middlec">
-                <table>
-                    <tr>
-                        <th><th>Enero</th></th>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/tokyo-revengers-t2.jpg">
-                            <div class="middle">
-                                <div class="text">Tokyo Revengers<br>T2<br>7 Enero</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/trigun-stampede.jpg">
-                            <div class="middle">
-                                <div class="text">Trigun Stampede<br>7 Enero</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/vinland-saga-t2.jpg">
-                            <div class="middle">
-                                <div class="text">Vinland Saga<br>T2<br>7 Enero</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/my-hero-academia-t6.jpg">
-                            <div class="middle">
-                                <div class="text">My Hero Academia<br>T6 P2<br>7 Enero</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><th><br>Marzo</th></th>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/shingeki-no-kyojin-ataque-titanes-t4.jpg">
-                            <div class="middle">
-                                <div class="text">Ataque a los Titanes<br>T4 P3<br>4 Marzo</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/black-clover-movie.jpg">
-                            <div class="middle">
-                                <div class="text">Black Clover: Sword of the Wizard King<br>31 Marzo</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><th><br>Abril</th></th>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/ancient-magus-bride-t2-scaled.jpg">
-                            <div class="middle">
-                                <div class="text">The Ancient Magus Bride<br>T2<br>6 Abril</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/mashle-anime-2023.jpg">
-                            <div class="middle">
-                                <div class="text">Mashle<br>Abril</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/kimetsu-no-yaiba-t3.jpg">
-                            <div class="middle">
-                                <div class="text">Kimetsu no Yaiba<br>T3<br>Abril</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/hells-paradise.jpg">
-                            <div class="middle">
-                                <div class="text">Hell’s Paradise<br>Abril</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/oshi-no-ko-anime.jpg">
-                            <div class="middle">
-                                <div class="text">Oshi no Ko<br>Abril</div>
-                            </div>
-                        </td>
-                        <td class="container"><img class="image" src="img/ranking-of-kings.jpg">
-                            <div class="middle">
-                                <div class="text">Ranking of Kings: Treasure Chest of Courage<br>Abril</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/dr-stone-t3.jpg">
-                            <div class="middle">
-                                <div class="text">Dr. Stone: New World<br>T3<br>Abril</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><th><br>Julio</th></th>
-                    </tr>
-                    <tr>
-                        <td class="container"><img class="image" src="img/jujutsu-kaisen-t2.jpg">
-                            <div class="middle">
-                                <div class="text">Jujutsu Kaisen<br>T2<br>Julio</div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                <br><br><br>
-            </div>
-            <div class="column side">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-                <img style="width: 340px; height: auto;" src="img/generico6.png">
-            </div>
-        </div>
-    </body>-->
-    <footer class="bg-dark-subtle text-dark pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row text-center text-md-start">
-                <!--Primera Columna-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
-                    <hr class="mb-4">
-                    <p>
-                        dssdasdsadasdsadsduisdsadbasds
-                        dasdsdasdsadasdsadsadsadasdsad
-                        sadasdsadsadsadsadsaddsas
-                        dasdsdsadasdadsadasdsadasdas
-                        dasdsadsdasadadsadasdwdadswawdaw
-                    </p>
-                </div>
-                <!--Segunda colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Formulario</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Ayuda</a>
-                    </p>
-                </div>
-                <!--Tercera colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
-                    </p>
-                </div>
-                <!--Cuarta Columna colunma-->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
-                    <hr class="mb-4">
-                    <p>
-                        <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
-                    </p>
-                    <p>
-                        <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
-                    </p>
-                    <p>
-                        <li class="fas fa-phone me-3"></li>55226422
-                    </p>
-                    <p>
-                        <li class="fas fa-print me-3"></li> 22535561
-                    </p>
-                </div>
+</body>
+<footer class="bg-dark-subtle text-dark pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <!--Primera Columna-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
                 <hr class="mb-4">
-                <div class="text-center mb-2">
-                    <p>Copyright Todos los Derechos reservados
-                        <a href="#"></a>
-                        <strong class="text-primary">Test</strong>
-                    </p>
-                </div>
-                <!--2da Fila-->
-                <div class="text-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                <p>
+                    dssdasdsadasdsadsduisdsadbasds
+                    dasdsdasdsadasdsadsadsadasdsad
+                    sadasdsadsadsadsadsaddsas
+                    dasdsdsadasdadsadasdsadasdas
+                    dasdsadsdasadadsadasdwdadswawdaw
+                </p>
+            </div>
+            <!--Segunda colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Tu cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Formulario</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Manejo de cuenta</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Ayuda</a>
+                </p>
+            </div>
+            <!--Tercera colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Legal</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Terminos y condiciones</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Preguntas Frecuentes</a>
+                </p>
+                <p>
+                    <a href="#" class="text-dark text-decoration-none">Politica de Privacidad</a>
+                </p>
+            </div>
+            <!--Cuarta Columna colunma-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bol text-primary">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home me-3"></li> Chile. ciudad Maipu
+                </p>
+                <p>
+                    <li class="fas fa-envelope me-3"></li> anime@gmail.col-md-3
+                </p>
+                <p>
+                    <li class="fas fa-phone me-3"></li>55226422
+                </p>
+                <p>
+                    <li class="fas fa-print me-3"></li> 22535561
+                </p>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+                <p>Copyright Todos los Derechos reservados
+                    <a href="#"></a>
+                    <strong class="text-primary">Test</strong>
+                </p>
+            </div>
+            <!--2da Fila-->
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark "><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-google-plus"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-dark"><i class="fab fa-git"></i></a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </html>
