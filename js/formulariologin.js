@@ -62,5 +62,8 @@ formulario.addEventListener('submit', (e) => {
 		});
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+		setTimeout(function(){
+			document.getElementById('formulario__mensaje').style.display = "none";
+			},6000);
 	}
 });
